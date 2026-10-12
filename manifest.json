@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Firebase Targeting 500 Fallback",
+  "version": "1.0.0",
+  "description": "Use empty targeting metadata only when Firebase enumeration returns HTTP 500.",
+  "content_scripts": [{
+    "matches": ["https://console.firebase.google.com/*"],
+    "js": ["fallback.js"],
+    "run_at": "document_start",
+    "world": "MAIN"
+  }]
+}
